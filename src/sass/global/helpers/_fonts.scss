@@ -1,11 +1,77 @@
-//EXAMPLE
-// @include font-face( 
-//   "MullerBold",
-//   "../fonts/MullerBold",
-//   400,
-//   normal,
-//   woff woff2 
-// );
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-Regular",
+  400,
+  normal,
+  woff woff2 
+);
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-Italic",
+  400,
+  italic,
+  woff woff2 
+);
+
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-Light",
+  300,
+  normal,
+  woff woff2 
+);
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-LightItalic",
+  300,
+  italic,
+  woff woff2 
+);
+
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-Medium",
+  500,
+  normal,
+  woff woff2 
+);
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-MediumItalic",
+  500,
+  italic,
+  woff woff2 
+);
+
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-SemiBold",
+  600,
+  normal,
+  woff woff2 
+);
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-SemiBoldItalic",
+  600,
+  italic,
+  woff woff2 
+);
+
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-Bold",
+  700,
+  normal,
+  woff woff2 
+);
+@include font-face( 
+  "Rubik",
+  "../fonts/rubik-BoldItalic",
+  700,
+  italic,
+  woff woff2 
+);
 
 /* weights
 thin-100
