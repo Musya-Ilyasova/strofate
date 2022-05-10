@@ -1,7 +1,27 @@
-h1 {
+h1, .h1 {
   font-size: $font-size-h1;
+  font-weight: 800;
+  color: black;
+  line-height: 1;
+  text-transform: uppercase;
+  @include mq('768') {
+    font-size: 60px;
+  }
+  @include mq('1280') {
+    font-size: 80px;
+  }
 }
 
 h2 {
   font-size: $font-size-h2;
+}
+p  {
+
+  line-height: 20px;
+  color: $text;
+  margin: 20px 0;
+  @include mq('768') {
+    font-size: 14px;
+  }
+
 }
