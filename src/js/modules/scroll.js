@@ -1,50 +1,48 @@
-// let count = 0;
-// let section = document.querySelectorAll('section');
-// function scroll() {
-//   window.addEventListener('scroll', sectionWheel)
-// }
-function sectionWheel(e) {
-  console.log('kk')
-
-  // if(e.deltaY>0) {
-  //   section[count].classList.remove('active');
-  //   count++
-  //   console.log(count++)
-  //   console.log(section.length)
-  //   console.log(e.deltaY)
-  //   if(count > section.length-1) {
-  //     count = section.length-1
-  //   };
-  //   section[count].classList.add('active');
-  // } else {
-  //   section[count].classList.remove('active');
-  //   count--
-  //   if(count <= 0) {
-  //     count = 0;
-  //   };
-  //   section[count].classList.add('active');
-  //   // console.log(count);
-  // }
-}
-// scroll();
-
-
 const sections = [...document.getElementsByTagName('section')];
 let currentSection = 0;
+let main = document.querySelector('main');
+var touchPos;
 
 window.addEventListener('wheel', function(e) {
-  e.preventDefault();
-
+  e.stopPropagation;
   (e.deltaY < 0) ? --currentSection: ++currentSection;
-
-  if (currentSection < 0) currentSection = 0;
-  else if (currentSection > (sections.length - 1)) currentSection = (sections.length - 1);
-
-  scrollToSection(currentSection);
+  translatePage(currentSection);
 });
 
-function scrollToSection(i) {
-  document.getElementById(sections[i].id).scrollIntoView({
-    behavior: 'smooth'
-  });
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+  e = e || window.event;
+  if (e.keyCode == '38') {
+    --currentSection
+  }
+  else if (e.keyCode == '40') {
+    ++currentSection
+  }
+  translatePage(currentSection);
 }
+
+main.ontouchstart = function(e){
+  touchPos = e.changedTouches[0].clientY;
+}
+
+main.ontouchmove = function(e){
+  
+  let newTouchPos = e.changedTouches[0].clientY;
+  if(newTouchPos > touchPos) {
+    ++currentSection
+  }
+  if(newTouchPos < touchPos) {
+    --currentSection
+  }
+  translatePage(currentSection);
+}
+
+function translatePage(i) {
+  if (i < 0) i = 0;
+  else if (i > (sections.length - 1)) i = (sections.length - 1);
+  let translateY = - main.scrollHeight/3 * i;
+  main.style.transform = 'translate3d(0px, ' + translateY + 'px, 0px)';
+}
+
+

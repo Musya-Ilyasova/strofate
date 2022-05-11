@@ -3,14 +3,11 @@ section {
   display: flex;
 	justify-content: center;
 	align-items: center;
-	// position: sticky;
 	top: 0;
 	left: 0;
-	background: transparent!important;
-	// opacity: 0;
-	// height: 0;
-		padding: 142px;
-		height: 100vh;
+	background: transparent;
+	padding: 142px;
+	height: 100vh;
 	&.active {
 		opacity: 1;
 		height: 100vh;

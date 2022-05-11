@@ -1,0 +1,22 @@
+.main-background {
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background: url(../img/lines.png) no-repeat;
+    background-size: contain;
+    width: 617px;
+    height: 793px;
+  }
+}
