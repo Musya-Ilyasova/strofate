@@ -23,13 +23,15 @@ body {
   font-weight: 400;
   color: $black;
   //Flexbox
-  // display: flex;
+  display: flex;
   flex-flow: column;
   overflow-anchor: auto;
   scroll-behavior: smooth;
   text-rendering: auto;
   background-color: $white;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   height: auto;
   position: relative;
   padding-top: 64px;
@@ -43,7 +45,8 @@ body {
 }
 main {
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
   // height: 100%;
   // transform: translate3d(0px, 0px, 0px);
   // transition: transform 0.3s ease-in-out;
