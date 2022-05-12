@@ -4,5 +4,8 @@
   max-width: $max-width;
   padding: 0 32px;
   margin: auto;
-  padding-right: 50%;
+  @include mq('768') {
+    padding-right: 50%;
+  }
+
 }

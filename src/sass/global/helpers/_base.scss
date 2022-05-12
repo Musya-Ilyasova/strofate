@@ -23,14 +23,16 @@ body {
   font-weight: 400;
   color: $black;
   //Flexbox
-  display: flex;
+  // display: flex;
   flex-flow: column;
-  height: 100vh;
   overflow-anchor: auto;
   scroll-behavior: smooth;
   text-rendering: auto;
   background-color: $white;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 64px;
 
   /*&::-webkit-scrollbar {
     background-color: $gray-dark;
@@ -40,9 +42,11 @@ body {
   }*/
 }
 main {
-  height: 100%;
-  transform: translate3d(0px, 0px, 0px);
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+  // height: 100%;
+  // transform: translate3d(0px, 0px, 0px);
+  // transition: transform 0.3s ease-in-out;
 }
 
 img,
@@ -85,7 +89,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: pointer;
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 2px #e4f1fd7a;
