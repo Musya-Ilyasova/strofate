@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   height: 100vh;
+  max-height: 747px;
   width: 100%;
   @include mq('768') {
     position: fixed;
@@ -26,5 +27,9 @@
     background-size: contain;
     width: 617px;
     height: 793px;
+    display: none;
+    @include mq('768') {
+      display: block;
+    }
   }
 }

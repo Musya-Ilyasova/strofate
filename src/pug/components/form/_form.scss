@@ -4,12 +4,75 @@
   border-radius: 60px;
   max-width: 445px;
   box-shadow: 0px 0px 80px rgba(181, 91, 183, 0.25);
-  height: 496px;
-  max-height: 496px;
+  height: auto;
   z-index: 1;
   pointer-events: all;
+  padding: 32px;
   @include mq('768') {
     margin: auto 0 auto auto;
+  }
+
+  &__decor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+    &:before, &:after {
+      content: "";
+      width: 40%;
+      height: 1px;
+      background: #E6E6E6;
+      flex-grow: 1;
+    }
+    .icon {
+      width: 21px;
+      height: 21px;
+      margin: 0 16px;
+    }
+
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.18;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__link {
+    color: #A0A0A0;
+    font-weight: 500;
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 20px;
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 22px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #E8EDFF;
+    border-radius: 30px;
+    background: $baige;
+    padding: 0 16px;
+    font-size: 15px;
+    &::placeholder {
+      font-weight: 400;
+      color: $placeholder;
+    }
+
   }
 
   &__wrapper {
@@ -18,7 +81,6 @@
     z-index: 1;
     pointer-events: none;
     padding: 20px;
-    margin-top: 64px;
     @include mq('768') {
       position: fixed;
       top: 0;
@@ -27,6 +89,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 64px;
     }
   }
   &__container {
@@ -38,7 +101,21 @@
       display: flex;
       align-items: center;
     }
-
+  }
+  &-footer {
+    &__link {
+      display: block;
+      text-align: center;
+      font-weight: 400;
+      color: #A0A0A0;
+    }
+    &__text {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
   }
 }
 

@@ -1,3 +1,22 @@
 .form__wrapper
   .form__container
     form.form(action="")
+      h2.form__title Find your Destiny 
+      span.form__decor 
+        +icon('sun')
+      .form__item 
+        input.form__input(type="email" placeholder="Email")
+        +icon('email')
+      .form__item 
+        input.form__input(type="password" placeholder="Password")
+        +icon('lock')
+      button.btn log in
+      a.form__link Forgot password?
+      span.form__decor 
+        +icon('moon')
+      .form-footer
+        a.form-footer__link Not registered yet? 
+        p.form-footer__text sign up for 
+          span.main FREE
+
+        
