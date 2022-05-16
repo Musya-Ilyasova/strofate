@@ -2,14 +2,20 @@
   background: $white;
   width: 100%;
   border-radius: 60px;
-  max-width: 445px;
   box-shadow: 0px 0px 80px rgba(181, 91, 183, 0.25);
   height: auto;
-  z-index: 1;
+  max-width: 400px;
+  z-index: 10000;
   pointer-events: all;
   padding: 32px;
+  margin: 0 auto;    
+
   @include mq('768') {
     margin: auto 0 auto auto;
+    max-width: 350px;
+  }
+  @include mq('1280') {
+    max-width: 445px;
   }
 
   &__decor {
@@ -36,15 +42,16 @@
   &__title {
     font-size: 20px;
     line-height: 1.18;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
   }
   &__link {
     color: #A0A0A0;
-    font-weight: 500;
+    font-weight: 400;
     margin: 20px 0;
     display: block;
+    font-size: 15px;
     text-align: center;
   }
 
@@ -69,7 +76,7 @@
     padding: 0 16px;
     font-size: 15px;
     &::placeholder {
-      font-weight: 400;
+      font-weight: 300;
       color: $placeholder;
     }
 
@@ -78,18 +85,20 @@
   &__wrapper {
     width: 100%;
     height: auto;
-    z-index: 1;
+    z-index: 1000;
     pointer-events: none;
     padding: 20px;
     @include mq('768') {
       position: fixed;
       top: 0;
       left: 0;
-      padding: 142px;
+      padding: 142px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 64px;
+      height: 100vh;
+      margin: 0;
     }
   }
   &__container {
@@ -106,13 +115,14 @@
     &__link {
       display: block;
       text-align: center;
-      font-weight: 400;
+      font-weight: 300;
       color: #A0A0A0;
+      font-size: 15px;
     }
     &__text {
       text-align: center;
       margin: 10px 0;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       font-size: 20px;
     }

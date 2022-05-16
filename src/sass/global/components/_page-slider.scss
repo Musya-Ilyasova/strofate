@@ -2,6 +2,10 @@
   margin: 109px 0 34px;
   width: 100%;
   overflow: hidden;
+  @include mq('768') {
+    margin: 0;
+    height: 100vh;
+  }
   &__wrapper {
     // overflow: hidden;
     max-width: 100%;
@@ -11,10 +15,24 @@
     display: flex;
     justify-content: center;
     margin-top: 12px;
+    @include mq('768') {
+      position: absolute;
+      top: 0;
+      left: 25px;
+      height: 100vh;
+      flex-direction: column;
+    }
+    @include mq('1600') {
+      left: 65px;
+    }
     &-bullet {
       width: 32px;
       height: 8px;
       position: relative;
+      @include mq('768') {
+        width: 8px;
+        height: 32px;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -27,14 +45,27 @@
         background-color: #E5E5E5;
         border-radius: 20px;
         transition: width 0.2s ease-in-out;
+        @include mq('768') {
+          top: 50%;
+          transform: translateY(-50%);
+          transition: height 0.2s ease-in-out;
+        }
       }
       &:not(:last-child) {
         margin-right: 30px;
+        @include mq('768') {
+          margin-right: 0;
+          margin-bottom: 30px;
+
+        }
       }
       &-active {
         &:before {
           background: $main;
           width: 100%;
+          @include mq('768') {
+            height: 100%;
+          }
         }
 
       }

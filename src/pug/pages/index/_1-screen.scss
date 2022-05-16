@@ -8,13 +8,14 @@ section {
 	background: transparent;
 	position: relative;
   @include mq('768') {
-		padding: 142px;
-		height: 100vh;
-
+		padding: 142px;   
+		padding: 142px 20px;
+		height: auto;
+		.container {
+			margin: 0;
+		}
 	}
-	// transition: 0.2s ease-in-out;
-	// transition-delay: 0.3s;
-	// &:first-child {
-	// 	opacity: 1;
-	// }
+  @include mq('1600') {
+		padding: 142px;   
+	}
 }

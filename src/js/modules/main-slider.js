@@ -3,9 +3,15 @@ const swiper = new Swiper('.page-slider', {
   slidesPerView: 1,
   spaceBetween: 10,
   breakpoints: {
-    640: {
+    768: {
       slidesPerView: 1,
       direction: 'vertical',
+      mousewheel: {
+        invert: false,
+        releaseOnEdges: true,
+      },
+      eventsTarget: 'section',
+      forceToAxis: true,
     }
   },
   pagination: {

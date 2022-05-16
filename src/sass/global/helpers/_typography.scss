@@ -1,13 +1,14 @@
 h1, .h1 {
   font-size: $font-size-h1;
-  font-weight: 800;
+  font-weight: 700;
   color: black;
   line-height: 1;
   text-transform: uppercase;
   @include mq('768') {
-    font-size: 60px;
+    font-size: 42px;
   }
   @include mq('1280') {
+    font-size: 60px;
     font-size: 80px;
   }
 }

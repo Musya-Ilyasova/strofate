@@ -20,7 +20,7 @@ body {
   font-family: $font-family-main;
   font-size: $font-size-main;
   line-height: 1.17;
-  font-weight: 400;
+  font-weight: 300;
   color: $black;
   //Flexbox
   display: flex;
@@ -35,6 +35,9 @@ body {
   height: auto;
   position: relative;
   padding-top: 64px;
+  @include mq('768') {
+    padding: 0;
+  }
 
   /*&::-webkit-scrollbar {
     background-color: $gray-dark;
