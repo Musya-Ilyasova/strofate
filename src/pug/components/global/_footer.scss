@@ -1,7 +1,6 @@
 .footer {
   width: 100%;
   z-index: 500;
-  background: $white;
   margin-top: auto;
   padding: 32px 0;
   @include mq('768') {
@@ -25,11 +24,11 @@
     flex-wrap: wrap;
     @include mq('768') {
       max-width: 60%;
-      background: $white;
     }
     &-item {
       padding-right: 30px;
       margin-bottom: 16px;
+      background: $white;
       @include mq('768') {
         padding-right: 15px;
       }

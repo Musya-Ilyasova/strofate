@@ -27,13 +27,13 @@
     background-size: 127% auto;
   }
   @media (min-device-width: 768px) and (max-device-width: 911px) and (orientation: portrait) {
-    background-position: right -324px top;
+    background-position: right -324px center;
   }
   @media (min-device-width: 912px) and (max-device-width: 1023px) and (orientation: portrait) {
-    background-position: right -425px top;
+    background-position: right -425px center;
   }
   @media (min-device-width: 1024px) and (max-device-width: 1280px) and (orientation: landscape) {
-    background-position: right 0% top;
+    background-position: right 0% center;
   }
   &:before {
     content: "";
