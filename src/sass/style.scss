@@ -4,6 +4,11 @@
 @import "../pug/pages/ui/_ui"; //remove before prod
 @import "../pug/pages/index/_1-screen";
 
+//privacy
+@import "../pug/pages/privacy/_privacy";
+//contacts
+@import "../pug/pages/contacts/_contacts";
+
 
 //form
 @import "../pug/components/form/_form";

@@ -1,0 +1,19 @@
+.contacts {
+  &-section {
+    &__link {
+      color: $main;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+  .main-background {
+		display: none;
+		@include mq('768') {
+			display: block;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+}

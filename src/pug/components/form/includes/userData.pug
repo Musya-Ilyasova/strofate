@@ -3,23 +3,22 @@ form.form.userData(action="")
   span.form__decor
     +icon('sun')
   .form__item
-    input.form__input(type="text" placeholder="Name")
+    input.form__input(type="text" placeholder="Your name")
     +icon('email')
   .form__item
-    input.form__input(type="text" placeholder="City")
+    input.form__input(type="text" placeholder="Place of Birth")
   .form__item
-    input.form__input(type="date" placeholder="Date Birthday")
+    input.form__input(type="date" placeholder="Date of Birthday")
+    +icon('input-arrow')
   .form__item
-    input.form__input(type="time" placeholder="Time Birthday")
-
+    input.form__input(type="time" placeholder="Time of Birthday")
+    +icon('input-arrow')
   .form__item
-    input.form__input(type="email" placeholder="Email")
+    input.form__input(type="email" placeholder="E-mail")
     +icon('email')
   button.btn save changes
-  a.form__link Forgot password?
   span.form__decor
     +icon('moon')
   .form-footer
-    a.form-footer__link Not registered yet?
-    p.form-footer__text sign up for
-      span.main FREE
+    a.form-footer__textLink Change password
+    a.form-footer__textLink Logout

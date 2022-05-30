@@ -14,8 +14,16 @@
     margin: auto 0 auto auto;
     max-width: 350px;
   }
-  @include mq('1280') {
+  @include mq('1024') {
     max-width: 445px;
+  }
+
+  &__text {
+    color: $form-text;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+
   }
 
   &__decor {
@@ -65,6 +73,23 @@
       right: 22px;
       width: 20px;
       height: 20px;
+      &-input-arrow {
+        width: 14px;
+        height: 10px;
+        pointer-events: none;
+      }
+    }
+    &_captcha {
+      display: flex; 
+      align-items: center;
+      .captcha {
+        width: 76px;
+        margin-left: 22px;
+      }
+      .form__input {
+        width: calc(100% - 76px - 22px);
+      }
+
     }
   }
   &__input {
@@ -75,11 +100,44 @@
     background: $baige;
     padding: 0 16px;
     font-size: 15px;
+    font-weight: 500;
+    color: $text;
     &::placeholder {
       font-weight: 300;
       color: $placeholder;
     }
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      height: 100%;
+      width: 60%;
+      cursor: pointer;
+    }
 
+  }
+  &__textarea {
+    width: 100%;
+    height: 220px;
+    border: 1px solid #E8EDFF;
+    border-radius: 30px;
+    background: $baige;
+    padding: 20px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $text;
+    &::placeholder {
+      font-weight: 300;
+      color: $placeholder;
+    }
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      height: 100%;
+      width: 60%;
+      cursor: pointer;
+    }
+
+
+
+    
   }
 
   &__wrapper {
@@ -112,19 +170,42 @@
     }
   }
   &-footer {
-    &__link {
-      display: block;
+    &__text {
       text-align: center;
       font-weight: 300;
       color: #A0A0A0;
       font-size: 15px;
-    }
-    &__text {
-      text-align: center;
       margin: 10px 0;
+    }
+    &__link {
+      display: block;
+      text-align: center;
       font-weight: 600;
       text-transform: uppercase;
       font-size: 20px;
+      color: $black;
+      cursor: pointer;
+    }
+    &__textLink {
+      font-weight: 300;
+      color: #A0A0A0;
+      font-size: 15px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    &__subtext {
+      font-size: 15px;
+      line-height: 1.25;
+      color: $form-text;
+      text-align: center;
+    }
+  }
+  &.userData {
+    margin-top: 80px;
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
