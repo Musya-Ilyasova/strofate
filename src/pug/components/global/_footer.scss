@@ -46,3 +46,10 @@
     }
   }
 }
+
+body:not(.index) .footer{
+  @include mq('768') {
+    position: relative;
+
+  }
+}

@@ -33,11 +33,13 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   height: auto;
+  min-height: 100%;
   position: relative;
-  padding-top: 64px;
+  // padding-top: 64px;
   @include mq('768') {
     padding: 0;
   }
+  
 
   /*&::-webkit-scrollbar {
     background-color: $gray-dark;
