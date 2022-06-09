@@ -47,9 +47,20 @@
   }
 }
 
-body:not(.index) .footer{
-  @include mq('768') {
-    position: relative;
-
+body:not(.index) .footer {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 32px - 32px);
+    height: 1px;
+    background: rgba($color: #000000, $alpha: 0.1);
+    @include mq('768') {
+      display: none;
+    }
   }
 }
