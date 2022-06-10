@@ -1,0 +1,21 @@
+.form__wrapper
+  .form__container
+    form.form.logIn(action="")
+      h2.form__title change password
+      span.form__decor
+        +icon('sun')
+      .form__item
+        input.form__input(type="password" placeholder="Current password")
+        +icon('lock')
+      .form__item
+        input.form__input(type="password" placeholder="New password")
+        +icon('lock')
+      
+      .form__item
+        input.form__input(type="password" placeholder="Confirm new password")
+        +icon('lock')
+      button.btn save changes
+      span.form__decor
+        +icon('moon')
+      .form-footer
+        a.form-footer__link Back to profile

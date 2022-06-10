@@ -1,6 +1,13 @@
 .about {
+  .main-background:before {
+    display: none;
+  }
   &-section {
     padding: 30px 0 60px;
+    @include mq('768') {
+      padding: 60px 0;
+
+    }
     &-item {
       @include mq('768') {
         display: grid;
@@ -17,7 +24,8 @@
         justify-content: center;
         margin: 20px 0;
         @include mq('768') {
-          margin-right: 30px;
+          margin: 30px;
+          margin-left: 0;
           grid-area: 1 / 1 / 3 / 2;
         }
         .icon {
@@ -33,14 +41,26 @@
         margin: 20px 0;
         display: block;
         @include mq('768') {
-          margin-bottom: 0;
+          margin: 30px 0 0;
           font-size: 20px;
         }
+      }
+      p {
+        @include mq('768') {
+          margin-bottom: 30px;
+        }
+
       }
     }
     .btn {
       margin: 30px 0;
       max-width: 445px;
     }
+  }
+  .page__text {
+    @include mq('768') {
+      margin-bottom: 40px;
+    }
+
   }
 }

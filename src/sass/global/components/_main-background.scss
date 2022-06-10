@@ -57,6 +57,10 @@ body:not(.index) .main-background {
     background-image: url(../img/bg-page.png);
     position: absolute;
   }
+  @include mq('1280') {
+    min-height: 1170px;
+    background-size: auto 100%;
+  }
   @media (min-device-width: 768px) and (max-device-width: 911px) and (orientation: portrait) {
     background-position: right -150px center;
   }

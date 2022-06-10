@@ -1,0 +1,23 @@
+.form__wrapper
+  .form__container
+    form.form.logIn(action="")
+      h2.form__title forgot password?
+      span.form__decor
+        +icon('sun')
+      .form__item
+        input.form__input(type="email" placeholder="E-mail")
+        +icon('email')
+      .form__item.form__item_captcha
+        input.form__input(type="text" placeholder="Enter the following")
+        .captcha 
+          img(src="img/captcha.png", alt="captcha")
+      button.btn Request new password
+      p.form__text If you forgot your password, enter your email below and we will send it to you again. Make sure you enter the same email you used to register.
+      span.form__decor
+        +icon('moon')
+      .form-footer
+        p.form-footer__subtext Remember password or create new account?
+        p.form-footer__link 
+          a.main sign up
+          | &nbsp; or &nbsp;
+          a.main login

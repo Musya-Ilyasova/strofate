@@ -214,6 +214,7 @@
 body:not(.index) .form__wrapper{
   @include mq('768') {
     position: absolute;
+    align-items: flex-start;
   }
 }
 
