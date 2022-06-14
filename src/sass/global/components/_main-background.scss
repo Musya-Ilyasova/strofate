@@ -67,5 +67,8 @@ body:not(.index) .main-background {
   @media (min-device-width: 912px) and (max-device-width: 1023px) and (orientation: portrait) {
     background-position: right -225px center;
   }
+  &:before {
+    display: none;
+  }
 
 }

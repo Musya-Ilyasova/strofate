@@ -3,55 +3,7 @@
     display: none;
   }
   &-section {
-    padding: 30px 0 60px;
-    @include mq('768') {
-      padding: 60px 0;
-
-    }
-    &-item {
-      @include mq('768') {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: repeat(2, auto);
-      }
-      &-img {
-        background: $darkmain;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-        @include mq('768') {
-          margin: 30px;
-          margin-left: 0;
-          grid-area: 1 / 1 / 3 / 2;
-        }
-        .icon {
-          width: 45px;
-          height: 45px;
-        }
-      }
-      &__title {
-        color: $text;
-        font-weight: 500;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin: 20px 0;
-        display: block;
-        @include mq('768') {
-          margin: 30px 0 0;
-          font-size: 20px;
-        }
-      }
-      p {
-        @include mq('768') {
-          margin-bottom: 30px;
-        }
-
-      }
-    }
+    padding-bottom: 60px;
     .btn {
       margin: 30px 0;
       max-width: 445px;

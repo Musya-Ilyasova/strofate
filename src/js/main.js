@@ -4,4 +4,5 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/menu.js');
   @@include('modules/main-slider.js');
   @@include('modules/reviews.js');
+  @@include('modules/premium-form-list.js');
 });

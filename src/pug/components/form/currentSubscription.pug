@@ -4,18 +4,19 @@
       h2.form__title Current subscription
       span.form__decor
         +icon('sun')
-      .form__item
-        input.form__input(type="password" placeholder="Current password")
-        +icon('lock')
-      .form__item
-        input.form__input(type="password" placeholder="New password")
-        +icon('lock')
-      
-      .form__item
-        input.form__input(type="password" placeholder="Confirm new password")
-        +icon('lock')
-      button.btn save changes
+      ul.sub-history-list
+        li.sub-history-list-item 
+          span.sub-history-list-item__title date OF EXPIRATION
+          span.sub-history-list-item__value 2020-10-01  14:55:29
+        li.sub-history-list-item 
+          span.sub-history-list-item__title currency
+          span.sub-history-list-item__value USD
+        li.sub-history-list-item 
+          span.sub-history-list-item__title price
+          span.sub-history-list-item__value 50
+        li.sub-history-list-item 
+          span.sub-history-list-item__title renewel STATUS
+          span.sub-history-list-item__value Active
       span.form__decor
         +icon('moon')
-      .form-footer
-        a.form-footer__link Back to profile
+      button.btn Cancel subscription

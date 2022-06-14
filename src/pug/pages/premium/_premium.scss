@@ -1,0 +1,80 @@
+.premium {
+  .page__title {
+    margin-bottom: 40px;
+  }
+  .form-footer__text {
+    text-align: left;
+    b {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+}  
+
+.premium-list {
+  &-item {
+    background-color: $premiumItemBack;
+    margin-bottom: 20px;
+    border: 1px solid $premiumItem;
+    border-radius: 12px;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      color: $black;
+      transition: color 0.2s ease-in-out;
+      .icon {
+        fill: $checkbox;
+        transition: fill 0.2s ease-in-out;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &__title {
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    &__pricetext {
+      color: $placeholder;
+      font-size: 12px;
+      margin-left: auto;
+      line-height: 1.3;
+      margin-right: 20px;
+      transition: color 0.2s ease-in-out;
+    }
+    &__price {
+      font-weight: 400;
+    }
+    &__text {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0 20px;
+      height: auto;
+      color: $white;
+      border-top: 1px solid transparent;
+      padding: 0;
+    }
+    &.active {
+      border: 2px solid $main;
+      background: $main;
+      .premium-list-item__header {
+        color: $white;
+      }
+      .icon {
+        fill: $white;
+      }
+      .premium-list-item__pricetext {
+        color: rgba($color: $white, $alpha: 0.5);
+      }
+      .premium-list-item__text {
+        max-height: 500px;
+        padding: 20px 0;
+        border-top: 1px solid rgba($color: $white, $alpha: 0.25);
+      }
+
+    }
+
+  }
+}

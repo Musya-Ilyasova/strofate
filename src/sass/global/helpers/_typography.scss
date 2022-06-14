@@ -26,12 +26,21 @@ h1, .h1 {
 
 h2 {
   font-size: $font-size-h2;
+  font-weight: 700;
+  color: black;
+  line-height: 1;
+  text-transform: uppercase;
 }
+
 p  {
   font-size: 14px;
   line-height: 20px;
   color: $text;
   margin: 20px 0;
+}
+
+b {
+  font-weight: 400;
 }
 
 .main {

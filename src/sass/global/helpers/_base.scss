@@ -57,6 +57,13 @@ main {
   // transition: transform 0.3s ease-in-out;
 }
 
+body:not(.index) section {
+  padding-top: 56px;
+  @include mq('768') {
+    padding-top: 60px;
+  }
+}
+
 img,
 video {
   max-width: 100%;
@@ -98,9 +105,15 @@ input[type="number"]::-webkit-inner-spin-button {
 a {
   text-decoration: none;
   color: pointer;
+  color: $main;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: darken($color: $main, $amount: 10%);
+  }
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 2px #e4f1fd7a;
+    color: darken($color: $main, $amount: 10%);
   }
   &:not([class]) {
     text-decoration-skip-ink: auto;
