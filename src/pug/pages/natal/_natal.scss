@@ -1,0 +1,94 @@
+.natal {
+  &-section {
+    .container {
+      @include mq('1280') {
+        padding-right: 338px;
+      }
+      
+    }
+  }
+  &-map {
+    width: 540px;
+    margin-top: 30px;
+    img {
+      width: 100%;
+      width: 540px;
+    }
+  }
+  &__subtitle {
+    color: $text;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .hr-sun {
+    margin-bottom: 30px;
+  }
+  
+
+}
+
+.natal-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include mq('1024') {
+    max-height: 250px;
+  }
+  &:first-of-type {
+    @include mq('1024') {
+      margin-right: auto;
+    }
+  }
+  &__wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    @include mq('1280') {
+      max-height: 266px;
+
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include mq('768') {
+      margin-bottom: 30px;
+    }
+    .icon {
+      width: 35px;
+      height: 35px;
+      padding: 7px;
+      border-radius: 8px;
+      margin-right: 20px;
+      &-trigon {
+        background: #55C883;
+      }
+      &-angle {
+        background: #1AD6FF;
+      }
+      &-snowflake {
+        background: #FF6C1A;
+      }
+      &-square {
+        background: #B737D7;
+      }
+      &-glasses {
+        background: #E44646;
+      }
+      &-loupe {
+        background: #007ABF;
+      }
+      &-retrograd {
+        background: #737373;
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
