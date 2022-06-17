@@ -1,9 +1,9 @@
-section.natal-section 
-  .container 
-    h1.page__title Astrological 
+section.natal-section
+  .container
+    h1.page__title Astrological
       br
       | Natal Chart
-    .natal-map 
+    .natal-map()
       img(src="img/natal-map.png" alt="Natal map")
     .natal-list__wrapper
       h2.natal__subtitle HARMONIOUS FACTORS
@@ -13,7 +13,7 @@ section.natal-section
           span TRIGON 120 °
         li.natal-list-item
           +icon('angle')
-          span SQUARE 90 ° 
+          span SQUARE 90 °
         li.natal-list-item
           +icon('snowflake')
           span QUEENCONS 150 °
@@ -31,6 +31,8 @@ section.natal-section
         li.natal-list-item
           +icon('retrograd')
           span RETROGRADE
+section.natal-section
+  .container
     hr.hr-sun
     h2.natal__subtitle ASPECT TABLE
     img.page__img(src="img/natal-graf.png", alt="ASPECT TABLE")
@@ -42,4 +44,3 @@ section.natal-section
 
 
 
-    

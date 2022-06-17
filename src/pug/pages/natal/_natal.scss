@@ -1,18 +1,26 @@
 .natal {
   &-section {
+    padding-bottom: 0;
     .container {
       @include mq('1280') {
         padding-right: 338px;
       }
-      
+    }
+    &:nth-child(2) {
+      padding-right: 20px;
+      padding-top: 0;
+      @include mq('1280') {
+        padding-top: 0;
+      }
     }
   }
   &-map {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
     margin-top: 30px;
     img {
       width: 100%;
-      width: 540px;
+      min-width: 0;
     }
   }
   &__subtitle {
@@ -24,7 +32,7 @@
   .hr-sun {
     margin-bottom: 30px;
   }
-  
+
 
 }
 
