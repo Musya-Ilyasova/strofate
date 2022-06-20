@@ -21,9 +21,14 @@
 //natal
 @import "../pug/pages/natal/_natal";
 
+//compatibility
+@import "../pug/pages/compatibility/_compatibility";
+
+
 
 //form
 @import "../pug/components/form/_aside";
 @import "../pug/components/form/_form";
 @import "../pug/components/form/_reviews";
 @import "../pug/components/form/_zodiac";
+@import "../pug/components/form/_compatibility";
