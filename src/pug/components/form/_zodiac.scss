@@ -1,0 +1,23 @@
+.zodiac {
+  &-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .icon {
+      width: 175px;
+      height: 175px;
+    }
+  }
+  &__title {
+    color: $form-text;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__text {
+    color: $text;
+    text-align: center;
+  }
+}
