@@ -1,24 +1,7 @@
-.compatibility-form {
-  height: 859px;
-  max-width: 1110px;
-  .plus {
-    width: 23px;
-    height: 23px;
-    margin: 0 auto;
-    position: relative;
-    &:before, &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      background-color: $black;
-      width: 100%;
-      height: 3px;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }  
-    &::after {
-      transform: rotate(-90deg) translateX(2px);
+.compatibility {
+  .aside__decor{
+    &:first-of-type {
+      margin-bottom: 0;
     }
   }
   &-slider {
@@ -31,7 +14,7 @@
       border-radius: 12px;
       background: #FFFFFF;
       width: 135px;
-      padding: 37px 20px;
+      padding: 37px 20px 20px;
       text-align: center;
       height: 100%;
       &-img {
@@ -44,6 +27,33 @@
       &__title {
         color: $form-text;
         font-weight: 400;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-top: 15px;
+        display: block;
+      }
+    }
+    &__wrapper {
+      max-width: 1110px;
+      .plus {
+        width: 23px;
+        height: 23px;
+        margin: 0 auto;
+        position: relative;
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          background-color: $black;
+          width: 100%;
+          height: 3px;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }  
+        &::after {
+          transform: rotate(-90deg) translateX(2px);
+        }
       }
     }
     .swiper {
@@ -53,16 +63,25 @@
         height: 100%;
       }
       &-slide {
+        cursor: pointer;
         .icon {
-          fill: $form-text;
           stroke: $form-text;
+          fill: $white;
+          stroke-width: 3px;
+          transition: stroke 0.2s ease-in-out;
+          &-gemini {
+            stroke-width: 12px;
+          }
         }
         &-active {
-          fill: $black;
-          stroke: $black;
+          .icon {
+            stroke: $black;
+          }
         }
       }
-
+    }
+    .first-slider {
+      margin-top: -10px;
     }
   }
 }

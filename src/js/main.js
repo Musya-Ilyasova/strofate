@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/reviews.js');
   @@include('modules/compatibility.js');
   @@include('modules/premium-form-list.js');
+  @@include('modules/select.js');
 });

@@ -1,39 +1,86 @@
 .aside__wrapper
   .aside__container
-    .aside.compatibility-form
+    .aside.compatibility-slider__wrapper
       h2.aside__title Current subscription
       span.aside__decor
         +icon('sun')
-      .compatibility-form-slider
+      .compatibility-slider(data-slider="firstSlider")
         .swiper.first-slider 
           .swiper-wrapper
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+            .swiper-slide.compatibility-slider-item(data-zodiac="gemini")
+              .compatibility-slider-item-img
                 +icon('gemini')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+              span.compatibility-slider-item__title 15 oct - 21 dec
+            .swiper-slide.compatibility-slider-item(data-zodiac="leo")
+              .compatibility-slider-item-img
                 +icon('leo')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+              span.compatibility-slider-item__title 15 oct - 21 dec
+            .swiper-slide.compatibility-slider-item(data-zodiac="pisces")
+              .compatibility-slider-item-img
                 +icon('pisces')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
+              span.compatibility-slider-item__title 15 oct - 21 dec
       .plus 
-      .compatibility-form-slider
+      .compatibility-slider(data-slider="secondSlider")
         .swiper.second-slider 
           .swiper-wrapper
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+            .swiper-slide.compatibility-slider-item(data-zodiac="gemini")
+              .compatibility-slider-item-img
                 +icon('gemini')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+              span.compatibility-slider-item__title 15 oct - 21 dec
+            .swiper-slide.compatibility-slider-item(data-zodiac="leo")
+              .compatibility-slider-item-img
                 +icon('leo')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
-            .swiper-slide.compatibility-form-slider-item
-              .compatibility-form-slider-item-img
+              span.compatibility-slider-item__title 15 oct - 21 dec
+            .swiper-slide.compatibility-slider-item(data-zodiac="pisces")
+              .compatibility-slider-item-img
                 +icon('pisces')
-              span.compatibility-form-slider-item__title 15 oct - 21 dec
+              span.compatibility-slider-item__title 15 oct - 21 dec
       span.aside__decor
         +icon('moon')
+      form.compatibility-form(action="") 
+        .form__item
+          .select#firstSlider 
+            span.select__choose(data-select="gemini")  
+              +icon('gemini') 
+              span Gemini
+            ul.select-list
+              li.select-list-item(data-select="gemini") 
+                +icon('gemini') 
+                | Gemini
+              li.select-list-item(data-select="leo") 
+                +icon('leo') 
+                | Leo
+              li.select-list-item(data-select="pisces")  
+                +icon('pisces') 
+                | Pisces
+            +icon('input-arrow')
+        .form__item
+          .select#secondSlider 
+            span.select__choose(data-select="gemini")  
+              +icon('gemini') 
+              span Gemini
+            ul.select-list
+              li.select-list-item(data-select="gemini") 
+                +icon('gemini') 
+                | Gemini
+              li.select-list-item(data-select="leo") 
+                +icon('leo') 
+                | Leo
+              li.select-list-item(data-select="pisces")  
+                +icon('pisces') 
+                | Pisces
+            +icon('input-arrow')
+        button.btn.btn_primary Check compatibility
+          //- select.form__input#firstSlider(name="") 
+          //-   option(value="gemini") 
+          //-     +icon('gemini') 
+          //-     | gemini
+          //-   option(value="leo") 
+          //-     +icon('leo') 
+          //-     | leo
+          //-   option(value="pisces") 
+          //-     +icon('pisces')
+          //-     | pisces
+          //- +icon('input-arrow')
+          
+
