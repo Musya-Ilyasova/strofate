@@ -5,82 +5,91 @@
       span.aside__decor
         +icon('sun')
       .compatibility-slider(data-slider="firstSlider")
-        .swiper.first-slider 
+        h3.compatibility-slider__title#first Gemini
+        span.aside__decor.compatibility-slider__decor
+          +icon('sun')
+        .swiper.first-slider
           .swiper-wrapper
             .swiper-slide.compatibility-slider-item(data-zodiac="gemini")
               .compatibility-slider-item-img
                 +icon('gemini')
               span.compatibility-slider-item__title 15 oct - 21 dec
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             .swiper-slide.compatibility-slider-item(data-zodiac="leo")
               .compatibility-slider-item-img
                 +icon('leo')
               span.compatibility-slider-item__title 15 oct - 21 dec
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             .swiper-slide.compatibility-slider-item(data-zodiac="pisces")
               .compatibility-slider-item-img
                 +icon('pisces')
               span.compatibility-slider-item__title 15 oct - 21 dec
-      .plus 
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      .plus
       .compatibility-slider(data-slider="secondSlider")
-        .swiper.second-slider 
+        h3.compatibility-slider__title#second Gemini
+        span.aside__decor.compatibility-slider__decor
+          +icon('sun')
+        .swiper.second-slider
           .swiper-wrapper
             .swiper-slide.compatibility-slider-item(data-zodiac="gemini")
               .compatibility-slider-item-img
                 +icon('gemini')
               span.compatibility-slider-item__title 15 oct - 21 dec
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             .swiper-slide.compatibility-slider-item(data-zodiac="leo")
               .compatibility-slider-item-img
                 +icon('leo')
               span.compatibility-slider-item__title 15 oct - 21 dec
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             .swiper-slide.compatibility-slider-item(data-zodiac="pisces")
               .compatibility-slider-item-img
                 +icon('pisces')
               span.compatibility-slider-item__title 15 oct - 21 dec
+              p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
       span.aside__decor
         +icon('moon')
-      form.compatibility-form(action="") 
+      form.compatibility-form(action="")
         .form__item
-          .select#firstSlider 
-            span.select__choose(data-select="gemini")  
-              +icon('gemini') 
+          .select#firstSlider
+            span.select__choose(data-select="gemini")
+              +icon('gemini')
               span Gemini
             ul.select-list
-              li.select-list-item(data-select="gemini") 
-                +icon('gemini') 
+              li.select-list-item(data-select="gemini")
+                +icon('gemini')
                 | Gemini
-              li.select-list-item(data-select="leo") 
-                +icon('leo') 
+              li.select-list-item(data-select="leo")
+                +icon('leo')
                 | Leo
-              li.select-list-item(data-select="pisces")  
-                +icon('pisces') 
+              li.select-list-item(data-select="pisces")
+                +icon('pisces')
                 | Pisces
             +icon('input-arrow')
+          select(name="compatibility-zodiac-first")
+            option(value="gemini" checked) Gemini
+            option(value="leo") Leo
+            option(value="Pisces") Pisces
         .form__item
-          .select#secondSlider 
-            span.select__choose(data-select="gemini")  
-              +icon('gemini') 
+          .select#secondSlider
+            span.select__choose(data-select="gemini")
+              +icon('gemini')
               span Gemini
             ul.select-list
-              li.select-list-item(data-select="gemini") 
-                +icon('gemini') 
+              li.select-list-item(data-select="gemini")
+                +icon('gemini')
                 | Gemini
-              li.select-list-item(data-select="leo") 
-                +icon('leo') 
+              li.select-list-item(data-select="leo")
+                +icon('leo')
                 | Leo
-              li.select-list-item(data-select="pisces")  
-                +icon('pisces') 
+              li.select-list-item(data-select="pisces")
+                +icon('pisces')
                 | Pisces
             +icon('input-arrow')
+          select(name="compatibility-zodiac-second")
+            option(value="gemini" checked) Gemini
+            option(value="leo") Leo
+            option(value="Pisces") Pisces
         button.btn.btn_primary Check compatibility
-          //- select.form__input#firstSlider(name="") 
-          //-   option(value="gemini") 
-          //-     +icon('gemini') 
-          //-     | gemini
-          //-   option(value="leo") 
-          //-     +icon('leo') 
-          //-     | leo
-          //-   option(value="pisces") 
-          //-     +icon('pisces')
-          //-     | pisces
-          //- +icon('input-arrow')
-          
+
 
