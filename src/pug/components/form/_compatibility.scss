@@ -44,7 +44,6 @@
         font-size: 20px;
         line-height: 1.2;
         text-align: center;
-
       }
     }
     &-item {
@@ -96,6 +95,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+      }
+      @include mq('1024') {
+        max-width: 1110px;
       }
       .plus {
         width: 23px;

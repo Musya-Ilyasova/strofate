@@ -24,12 +24,12 @@ function selectItem(slider, select, title) {
       let data = target.dataset.select;
       wrapper.style.display = '';
       title.textContent = data;
-      console.log(title.textContent)
+      // console.log(title.textContent)
 
       slider.slideTo(document.querySelector('[data-slider="'+select.getAttribute('id')+'"] [data-zodiac="'+ data +'"]').getAttribute('data-swiper-slide-index'));
-      // console.log(data);
+      // document.querySelector('[data-slider="'+select.getAttribute('id')+'"] .swiper-slide[data-zodiac="'+ data +'"]').click();
       changeValueSelect(icon, use, chooseIcon, choose, data);
-      console.log(target.dataset.select)
+      console.log(document.querySelector('[data-slider="'+select.getAttribute('id')+'"] [data-zodiac="'+ data +'"]').getAttribute('data-swiper-slide-index'));
     }
   })
 }
