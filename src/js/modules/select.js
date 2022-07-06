@@ -1,10 +1,9 @@
-function selectItem(slider, select, title) {
+function selectItem(select) {
   let wrapper = document.createElement('div')
   wrapper.classList.add('select__wrapper');
   select.appendChild(wrapper);
   select.addEventListener('click', function(e) {
     let choose = select.querySelector('.select__choose'),
-    chooseIcon = choose.querySelector('.icon'),
     list = select.querySelector('.select-list');
     let target  = e.target;
     if(target.classList.value == 'select__choose') {
@@ -16,35 +15,10 @@ function selectItem(slider, select, title) {
       list.classList.remove('show');
       wrapper.style.display = '';
     };
-    if(target.classList.value == 'select-list-item') {
-      choose.classList.remove('open');
+    if(target.classList.contains('select-list-item')) {
       list.classList.remove('show');
-      let icon = target.querySelector('.icon');
-      let use = icon.querySelector('use').getAttribute('xlink:href');
-      let data = target.dataset.select;
+      choose.classList.remove('open');
       wrapper.style.display = '';
-      title.textContent = data;
-      // console.log(title.textContent)
-
-      slider.slideTo(document.querySelector('[data-slider="'+select.getAttribute('id')+'"] [data-zodiac="'+ data +'"]').getAttribute('data-swiper-slide-index'));
-      // document.querySelector('[data-slider="'+select.getAttribute('id')+'"] .swiper-slide[data-zodiac="'+ data +'"]').click();
-      changeValueSelect(icon, use, chooseIcon, choose, data);
-      console.log(document.querySelector('[data-slider="'+select.getAttribute('id')+'"] [data-zodiac="'+ data +'"]').getAttribute('data-swiper-slide-index'));
     }
-  })
+  }, true)
 }
-
-function changeValueSelect(icon, use, chooseIcon, choose, data) {
-  chooseIcon.classList = icon.classList;
-  chooseIcon.querySelector('use').setAttribute('xlink:href', use);
-  choose.querySelector('span').textContent = data;
-  choose.dataset.select = data;
-  // changeValueRealSelect(data, select);
-}
-
-
-// function changeValueRealSelect(data, select) {
-//   let realSelect = select.parentNode.querySelector('select');
-//   console.log(realSelect)
-
-// }
