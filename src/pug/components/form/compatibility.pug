@@ -25,6 +25,11 @@
                 +icon('pisces')
               span.compatibility-slider-item__title 15 oct - 21 dec
               p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          .compatibility-nav 
+            button.compatibility-nav-prev
+              +icon('prev')
+            button.compatibility-nav-next
+              +icon('prev')
       .plus
       .compatibility-slider(data-slider="secondSlider")
         h3.compatibility-slider__title#second Gemini
@@ -47,31 +52,32 @@
                 +icon('pisces')
               span.compatibility-slider-item__title 15 oct - 21 dec
               p.compatibility-slider-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          .compatibility-nav 
+            button.compatibility-nav-prev
+              +icon('prev')
+            button.compatibility-nav-next
+              +icon('prev')
       span.aside__decor
         +icon('moon')
       form.compatibility-form(action="")
         .form__item
+          span.aside__decor
+            +icon('moon')
           .select#firstSlider
             span.select__choose(data-select="gemini")
               +icon('gemini')
               span Gemini
             ul.select-list
             +icon('input-arrow')
-          //- select(name="compatibility-zodiac-first")
-          //-   option(value="gemini" checked) Gemini
-          //-   option(value="leo") Leo
-          //-   option(value="Pisces") Pisces
         .form__item
+          span.aside__decor
+            +icon('moon')
           .select#secondSlider
             span.select__choose(data-select="gemini")
               +icon('gemini')
               span Gemini
             ul.select-list
             +icon('input-arrow')
-          //- select(name="compatibility-zodiac-second")
-          //-   option(value="gemini" checked) Gemini
-          //-   option(value="leo") Leo
-          //-   option(value="Pisces") Pisces
         button.btn.btn_primary Check compatibility
 
 

@@ -1,3 +1,4 @@
+
 if(document.querySelector('body').classList.contains('compatibility')) {
   document.querySelectorAll('.compatibility-slider').forEach((s) => {
     let dataSlider = s.dataset.slider;
@@ -7,8 +8,9 @@ if(document.querySelector('body').classList.contains('compatibility')) {
     let list = [];
     let items = s.querySelectorAll('.compatibility-slider-item');
     let realSelect = document.createElement('select');
+    let nextArrow = s.querySelector('.compatibility-nav-next');
+    let prevArrow = s.querySelector('.compatibility-nav-prev');
     realSelect.setAttribute('name', 'compatibility-zodiac-' + s.dataset.slider);
-
     for(let i=0; i<=items.length-1; i++) {
       let option = document.createElement('option');
       option.setAttribute('value', items[i].dataset.zodiac);
@@ -32,6 +34,10 @@ if(document.querySelector('body').classList.contains('compatibility')) {
             return '<li class="' + className + ' select-list-item"><svg class="icon icon-'+ (list[index]) +'"><use xlink:href="img/sprite/sprite.svg#'+ (list[index]) +'"></use></svg>' + (list[index]) + '</li>';
           },
       },
+      navigation: {
+        nextEl: nextArrow,
+        prevEl: prevArrow,
+      },
       on: {
         init: function () {
         },
@@ -52,7 +58,6 @@ if(document.querySelector('body').classList.contains('compatibility')) {
   });
 }
 
-
 function changeSelect(select, slide, realSelect) {
   let icon = slide.querySelector('.compatibility-slider-item-img .icon');
   let data = slide.dataset.zodiac;
@@ -65,8 +70,6 @@ function changeSelect(select, slide, realSelect) {
   choose.dataset.select = data;
   changeValueRealSelect(data, realSelect);
 }
-
-
 
 function changeValueRealSelect(data, realSelect) {
   realSelect.querySelector('[selected]').removeAttribute("selected");

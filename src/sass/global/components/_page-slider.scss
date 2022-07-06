@@ -10,7 +10,7 @@
     // overflow: hidden;
     max-width: 100%;
   }
-  .swiper-pagination {
+  div.swiper-pagination {
     margin-top: 12px;
     @include mq('768') {
       position: absolute;
@@ -22,7 +22,7 @@
     @include mq('1600') {
       left: 65px;
     }
-    &-bullet {
+    .swiper-pagination-bullet {
       @include mq('768') {
         width: 8px;
         height: 32px;
@@ -46,12 +46,9 @@
             height: 100%;
           }
         }
-
       }
     }
   }
-
-
 }
 
 body:not(.compatibility) {

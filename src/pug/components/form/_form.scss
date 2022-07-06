@@ -2,7 +2,7 @@
   &__item {
     position: relative;
     margin-bottom: 20px;
-    .icon {
+    .icon-input-arrow, .icon-email, .icon-lock {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
