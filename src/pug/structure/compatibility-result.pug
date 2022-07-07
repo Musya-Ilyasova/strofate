@@ -1,0 +1,14 @@
+include ../mixins/mixins
+doctype html
+html(lang="ru")
+  include ../components/global/head
+  body.compatibility-result
+    include ../components/global/header-profil
+    include ../components/form/reviews
+    //main
+    main
+      .main-background
+      include ../pages/compatibility-result/compatibility-result
+    include ../components/global/footer
+    include ../components/global/scripts
+    include ../components/modals/pages

@@ -8,7 +8,7 @@ section {
 	background: transparent;
 	position: relative;
   @include mq('768') {
-		padding: 142px;   
+		padding: 142px;
 		padding: 142px 20px;
 		height: auto;
 		.container {
@@ -16,6 +16,9 @@ section {
 		}
 	}
   @include mq('1600') {
-		padding: 142px;   
+		padding: 142px;
+	}
+	p {
+		text-shadow: 1px 1px 1px $white;
 	}
 }
