@@ -1,10 +1,12 @@
 [
   {
-    "zodiac-first": "gemini",
-    "zodiac-first-date": "15 OCT - 21 DEC",
-    "zodiac-second": "leo",
-    "zodiac-second-date": "15 OCT - 21 DEC",
-    "percentage-list" : [ 
+    "zodiacs": [
+      {
+        "gemini": "15 OCT - 21 DEC",
+        "leo": "15 OCT - 21 DEC"
+      }
+    ],
+    "percentage-list" : [
       {
         "icon" : "check",
         "name" : "Relations",
