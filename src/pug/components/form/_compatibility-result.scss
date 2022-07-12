@@ -1,0 +1,53 @@
+.results {
+  &-zodiac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      .icon {
+        width: 65px;
+        height: 65px;
+        fill: none;
+        stroke: $black;
+        stroke-width: 3px;
+        margin: 0 auto 10px;
+        &-gemini {
+          stroke-width: 12px;
+        }
+      }
+      &__title {
+        color: $main;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      &__subtitle {
+        color: $form-text;
+        font-size: 15px;
+        max-width: 95px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.2;
+        display: block;
+        margin: 10px 0;
+        text-transform: uppercase;
+      }
+    }
+    .plus {
+      margin: 0 27px;
+      transform: translateY(-40px);
+    }
+  }
+  &-list {
+    &-item {
+      &__title {
+        color: $text;
+        
+      }
+    }
+  }
+}

@@ -24,6 +24,9 @@
 //compatibility
 @import "../pug/pages/compatibility/_compatibility";
 
+//compatibility result
+@import "../pug/pages/compatibility-result/_compatibility-result";
+
 
 
 //form
@@ -32,3 +35,4 @@
 @import "../pug/components/form/_reviews";
 @import "../pug/components/form/_zodiac";
 @import "../pug/components/form/_compatibility";
+@import "../pug/components/form/_compatibility-result";
