@@ -1,0 +1,41 @@
+[
+  {
+    "zodiac-first": "gemini",
+    "zodiac-first-date": "15 OCT - 21 DEC",
+    "zodiac-second": "leo",
+    "zodiac-second-date": "15 OCT - 21 DEC",
+    "percentage-list" : [ 
+      {
+        "icon" : "check",
+        "name" : "Relations",
+        "percent" : "75"
+      },
+      {
+        "icon" : "heart",
+        "name" : "Intimacy",
+        "percent" : "50"
+      },
+      {
+        "icon" : "home",
+        "name" : "Family",
+        "percent" : "100"
+      },
+      {
+        "icon" : "check",
+        "name" : "Friendship",
+        "percent" : "68"
+      },
+      {
+        "icon" : "users",
+        "name" : "Work",
+        "percent" : "47"
+      },
+      {
+        "icon" : "briefcase",
+        "name" : "Relations",
+        "percent" : "75"
+      }
+
+    ]
+  }
+]

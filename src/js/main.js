@@ -7,4 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/compatibility.js');
   @@include('modules/premium-form-list.js');
   @@include('modules/select.js');
+  @@include('modules/compatibility-result.js');
+
 });

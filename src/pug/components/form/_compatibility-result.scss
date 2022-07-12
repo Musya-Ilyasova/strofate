@@ -6,6 +6,7 @@
     &-item {
       display: flex;
       flex-direction: column;
+      min-height: 200px;
       .icon {
         width: 65px;
         height: 65px;
@@ -46,7 +47,7 @@
     &-item {
       &__title {
         color: $text;
-        
+
       }
     }
   }
