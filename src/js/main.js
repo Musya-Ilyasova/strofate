@@ -8,5 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/premium-form-list.js');
   @@include('modules/select.js');
   @@include('modules/compatibility-result.js');
+  @@include('modules/tabs.js');
 
 });

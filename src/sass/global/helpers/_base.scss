@@ -112,7 +112,7 @@ a {
   }
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #e4f1fd7a;
+    box-shadow: none;
     color: darken($color: $main, $amount: 10%);
   }
   &:not([class]) {
