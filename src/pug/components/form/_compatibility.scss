@@ -169,14 +169,13 @@
   &-nav {
     position: absolute;
     top: 38px;
-    @include mq('1280') {
-      top: 74px;
-
-    }
     width: 100%;
     display: flex;
     justify-content: space-between;
     pointer-events: none;
+    @include mq('1280') {
+      top: 74px;
+    }
     button {
       background: transparent;
       width: 40px;
@@ -186,6 +185,10 @@
       pointer-events: all;
       position: relative;
       z-index: 2;
+      display: none;
+      @include mq('1280') {
+        display: block;
+      }
       .icon {
         width: 16px;
         height: 13px;
@@ -226,6 +229,13 @@
         height: 0;
         border: 0;
         pointer-events: none;
+      }
+      .aside__decor {
+        display: none;
+        @include mq('768') {
+          display: block;
+        }
+
       }
     }
     .btn_primary {

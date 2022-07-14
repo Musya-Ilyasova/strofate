@@ -69,6 +69,7 @@
     z-index: 1000;
     pointer-events: none;
     padding: 20px;
+    padding-top: 80px;
     @include mq('768') {
       position: fixed;
       top: 0;
@@ -134,6 +135,7 @@
 
 
 body:not(.index) .aside__wrapper{
+  padding-top: 20px;
   @include mq('768') {
     position: absolute;
     align-items: flex-start;

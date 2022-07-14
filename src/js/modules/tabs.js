@@ -3,6 +3,17 @@ function toggleTabs() {
   let links = document.querySelectorAll('.tabs-links__item');
   let content = document.querySelectorAll('.tabs-content__item');
   
+  let contentH =[]
+  for(let i=0; i<=content.length-1; i++) {
+    contentH.push(content[i].scrollHeight);
+  }
+  let max = Math.max.apply(null, contentH);
+  if(window.innerWidth>=768) {
+    document.querySelector('.tabs-content').style.minHeight = max + 'px';
+  }
+
+
+
   tabs.addEventListener('click', function(e) {
     let target = e.target;
     if(target.classList.contains('tabs-links__item')) {
@@ -14,9 +25,8 @@ function toggleTabs() {
       document.querySelector('.tabs-content__item[id="'+id+'"]').classList.add('show');
       
     }
-    
-
-
   });
 }
-toggleTabs()
+if(document.querySelector('body').classList.contains('horoscopes')) {
+  toggleTabs();
+}

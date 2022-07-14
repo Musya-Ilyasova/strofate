@@ -5,10 +5,24 @@
   &-links {
     display: flex;
     align-items: center;
-    min-width: 372px;
+    width: auto;
     overflow-x: scroll;
     padding-bottom: 15px;
-    padding-right: 40px;
+    padding-right: 20px;
+    @include mq('1024') {
+      overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: $hr;
+      height: 3px;
+      border-radius: 16px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $main;
+      border-radius: 16px;
+      cursor: pointer;
+    }
     &__item {
       display: block;
       margin-right: 10px;

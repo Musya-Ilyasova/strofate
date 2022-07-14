@@ -41,12 +41,14 @@ body {
   }
   
 
-  /*&::-webkit-scrollbar {
-    background-color: $gray-dark;
+  &::-webkit-scrollbar {
+    background-color: $hr;
+    width: 7px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $red;
-  }*/
+    background-color: $main;
+    border-radius: 16px;
+  }
 }
 main {
   width: 100%;
