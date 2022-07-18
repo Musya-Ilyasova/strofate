@@ -14,6 +14,6 @@ function premiumListToggle() {
   })
 }
 
-if(document.body.classList.contains('premium')) {
+if(body.classList.contains('premium')) {
   premiumListToggle();
 }

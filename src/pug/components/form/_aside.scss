@@ -82,6 +82,13 @@
       height: 100vh;
       margin: 0;
     }
+
+    &.userData {
+      .aside-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
   &__container {
     max-width: 1110px;
@@ -125,12 +132,6 @@
       text-align: center;
     }
   }
-  &.userData {
-    .aside-footer {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
 }
 
 
@@ -139,6 +140,7 @@ body:not(.index) .aside__wrapper{
   @include mq('768') {
     position: absolute;
     align-items: flex-start;
+    padding-top: 110px;
   }
 }
 

@@ -6,7 +6,7 @@
     min-height: 1216px;
   }
   
-  .aside__wrapper {
+  div.aside__wrapper {
     @include mq('768') {
       padding-top: 376px;
     }
@@ -233,7 +233,7 @@
       .aside__decor {
         display: none;
         @include mq('768') {
-          display: block;
+          display: flex;
         }
 
       }

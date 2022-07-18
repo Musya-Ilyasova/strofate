@@ -10,5 +10,5 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/select.js');
   @@include('modules/compatibility-result.js');
   @@include('modules/tabs.js');
-
+  @@include('modules/changePass.js');
 });

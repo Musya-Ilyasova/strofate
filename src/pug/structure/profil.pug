@@ -2,18 +2,13 @@ include ../mixins/mixins
 doctype html
 html(lang="ru")
   include ../components/global/head
-  body.index
+  body.profil
     include ../components/global/header-profil
     include ../components/form/userData
     //main
     main
       .main-background
-      .swiper.page-slider
-        .swiper-wrapper.page-slider__wrapper
-          include ../pages/index/1-screen
-          include ../pages/index/2-screen
-          include ../pages/index/3-screen
-        .swiper-pagination
+      include ../pages/profil/profil
     include ../components/global/footer
     include ../components/global/scripts
     include ../components/modals/pages

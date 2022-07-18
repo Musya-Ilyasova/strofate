@@ -61,7 +61,7 @@ function resultsListAdd(results) {
 
   }
 }
-if(document.querySelector('body').classList.contains('compatibility-result')) {
+if(body.classList.contains('compatibility-result')) {
   compatibilityResultLoad();
 }
 

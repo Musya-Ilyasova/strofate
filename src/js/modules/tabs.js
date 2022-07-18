@@ -27,6 +27,6 @@ function toggleTabs() {
     }
   });
 }
-if(document.querySelector('body').classList.contains('horoscopes')) {
+if(body.classList.contains('horoscopes')) {
   toggleTabs();
 }

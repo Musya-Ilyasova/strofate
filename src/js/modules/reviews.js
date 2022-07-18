@@ -1,4 +1,4 @@
-if(document.querySelector('body').classList.contains('about')) {
+if(body.classList.contains('about')) {
   const swiperReviews = new Swiper('.reviews', {
     loop: true,
     slidesPerView: 1,
@@ -11,11 +11,6 @@ if(document.querySelector('body').classList.contains('about')) {
     navigation: {
       nextEl: '.reviews-nav-next',
       prevEl: '.reviews-nav-prev',
-    },
-    on: {
-      init: function () {
-        console.log('swiper initialized');
-      },
-    },
+    }
   });
 }
