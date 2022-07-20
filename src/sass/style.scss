@@ -2,7 +2,12 @@
 @import "global/components/components";
 @import "global/libs/libs";
 @import "../pug/pages/ui/_ui"; //remove before prod
+
+//index
 @import "../pug/pages/index/_1-screen";
+
+//profil
+@import "../pug/pages/profil/_profil";
 
 //privacy
 @import "../pug/pages/privacy/_privacy";
@@ -26,6 +31,9 @@
 
 //compatibility result
 @import "../pug/pages/compatibility-result/_compatibility-result";
+
+//horoscopes
+@import "../pug/pages/horoscopes/_horoscopes";
 
 
 

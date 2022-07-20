@@ -1,55 +1,16 @@
-.aside__wrapper
+.aside__wrapper.results
   .aside__container
     .aside
       h2.aside__title results
       span.aside__decor
         +icon('sun')
-      .results
-        .results-zodiac
-          .results-zodiac-item
-            +icon('gemini')
-            //- span.results-zodiac-item__title GEMINI
-            //- span.results-zodiac-item__subtitle 15 oct - 21 dec
-          .plus
-          .results-zodiac-item
-            +icon('leo')
-            //- span.results-zodiac-item__title leo
-            //- span.results-zodiac-item__subtitle 15 oct - 21 dec
-        span.aside__decor
-          +icon('moon')
-        .results-list
-          //- .results-list-item
-          //-   span.results-list-item__title
-          //-     +icon('check')
-          //-     | Relations
-          //-   span.results-list-item__value 75%
-          //-   .results-list-item__bar
-          //-     i
-          //- .results-list-item
-          //-   span.results-list-item__title
-          //-     +icon('heart')
-          //-     | Intimacy
-          //-   span.results-list-item__value 75%
-          //-   .results-list-item__bar
-          //-     i
-          //- .results-list-item
-          //-   span.results-list-item__title
-          //-     +icon('home')
-          //-     | Family
-          //-   span.results-list-item__value 75%
-          //-   .results-list-item__bar
-          //-     i
-          //- .results-list-item
-          //-   span.results-list-item__title
-          //-     +icon('users')
-          //-     | Friendship
-          //-   span.results-list-item__value 75%
-          //-   .results-list-item__bar
-          //-     i
-          //- .results-list-item
-          //-   span.results-list-item__title
-          //-     +icon('briefcase')
-          //-     | Work
-          //-   span.results-list-item__value 75%
-          //-   .results-list-item__bar
-          //-     i
+      .results-zodiac
+        .results-zodiac-item
+          +icon('gemini')
+        .plus
+        .results-zodiac-item
+          +icon('leo')
+      span.aside__decor
+        +icon('moon')
+      .results-list
+      a(href="./compatibility.html").btn.btn_primary  Choose another

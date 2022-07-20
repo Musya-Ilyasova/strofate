@@ -69,6 +69,7 @@
     z-index: 1000;
     pointer-events: none;
     padding: 20px;
+    padding-top: 80px;
     @include mq('768') {
       position: fixed;
       top: 0;
@@ -80,6 +81,13 @@
       margin-top: 64px;
       height: 100vh;
       margin: 0;
+    }
+
+    &.userData {
+      .aside-footer {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
   &__container {
@@ -124,19 +132,15 @@
       text-align: center;
     }
   }
-  &.userData {
-    .aside-footer {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
 }
 
 
 body:not(.index) .aside__wrapper{
+  padding-top: 20px;
   @include mq('768') {
     position: absolute;
     align-items: flex-start;
+    padding-top: 110px;
   }
 }
 

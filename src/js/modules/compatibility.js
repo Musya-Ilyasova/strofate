@@ -1,5 +1,5 @@
 
-if(document.querySelector('body').classList.contains('compatibility')) {
+if(body.classList.contains('compatibility')) {
   document.querySelectorAll('.compatibility-slider').forEach((s) => {
     let dataSlider = s.dataset.slider;
     let select = document.querySelector('[id="'+ dataSlider+'"]');

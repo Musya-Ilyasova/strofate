@@ -1,4 +1,10 @@
 .results {
+  .aside {
+    min-height: 779px;
+  }
+  .btn {
+    margin-top: 30px;
+  }
   &-zodiac {
     display: flex;
     justify-content: center;
@@ -6,13 +12,14 @@
     &-item {
       display: flex;
       flex-direction: column;
+      min-height: 179px;
       .icon {
-        width: 65px;
-        height: 65px;
+        width: 86px;
+        height: 86px;
         fill: none;
         stroke: $black;
         stroke-width: 3px;
-        margin: 0 auto 10px;
+        margin: 0 auto 20px;
         &-gemini {
           stroke-width: 12px;
         }
@@ -31,22 +38,55 @@
         max-width: 95px;
         text-align: center;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 1.3;
         display: block;
-        margin: 10px 0;
+        margin: 10px 0 0;
         text-transform: uppercase;
       }
     }
     .plus {
       margin: 0 27px;
-      transform: translateY(-40px);
+      transform: translateY(-35px);
     }
   }
   &-list {
     &-item {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
       &__title {
         color: $text;
-
+        font-weight: 400;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        flex-shrink: 1;
+      }
+      &__bar {
+        width: 100%;
+        background: $hr;
+        height: 6px;
+        margin: 16px 0 0;
+        position: relative;
+        border-radius: 6px;
+        i {
+          width: 70%;
+          height: 100%;
+          background: $main;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 6px;
+          transition: width 0.2s ease-in-out;
+        }
+      }
+      &__value {
+        margin-left: auto;
+        font-weight: 600;
       }
     }
   }

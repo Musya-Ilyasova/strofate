@@ -1,6 +1,6 @@
 .header {
   padding: 20px 0;
-  z-index: 1000;
+  z-index: 1001;
   position: absolute;
   top: 0;
   left: 0;
@@ -59,46 +59,117 @@
     .header__logo {
       margin: 0 auto;
       width: 116px;
+      z-index: 1;
       @include mq('768') {
         margin-left: 0;
       }
     }
     &__burger {
       order: 0;
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 20px;
       padding: 0;
       flex-shrink: 0;
       background: transparent;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      z-index: 1;
+      &:focus {
+        box-shadow: none;
+      }
       @include mq('768') {
         display: none;
       }
       i {
-        // position: absolute;
+        position: absolute;
         background-color: $black;
         width: 100%;
         height: 2px;
+        left: 0;
+        transition-property: transform, top;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.2s, 0.2s;
+        transition-delay: 0s, 0.2s;
+        transform: rotate(0);
+        &:first-child {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: 50%;
+          transition-property: top, opacity;
+          transition-duration: 0.2s, 0.2s;
+          transition-delay: 0s, 0.2s;
+        }
+        &:last-child {
+          top: 100%;
+        }
+      }
+      &.close {
+        i {
+          top: 50%;
+          transition-duration: 0.2s, 0.2s;
+          transition-delay: 0.2s, 0s;
+          &:first-child {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            transition-property: top, opacity;
+            transition-duration: 0.2s, 0.1s;
+            transition-delay: 0s, 0.2s;
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
 
       }
     }
     &__nav {
-      display: flex;
+      width: 0;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      transform: translateX(100%);
+      transition-property: transform, width;
+      transition-duration: 0.2s, 0s;
+      transition-delay: 0s, 0.2s;
+      transition-timing-function: ease-in-out;
+      &.show {
+        transform: translateX(0);
+        transition-duration: 0.2s, 0s;
+        transition-delay: 0.2s, 0s;
+        width: 100%;
+      }
+
       @include mq('768') {
         order: 2;
+        width: auto;
+        height: auto;
+        display: flex;
+        position: relative;
+        transform: translateX(0);
+        overflow: visible;
       }
     }
-    &-menu {
-      display: none;
+    .header-profil-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: $white;
       @include mq('768') {
         display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
       }
       &-item {
+        text-align: center;
         @include mq('768') {
           margin-right: 13px;
+          text-align: left;
         }
         @include mq('1280') {
           margin-right: 60px;
@@ -107,11 +178,14 @@
           color: $text;
           font-weight: 500;
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 28px;
+          padding: 10px 0;
+          display: block;
           @include mq('768') {
-            padding-top: 30px;
+            padding: 0;
             font-size: 14px;
             position: relative;
+            height: auto;
           }
           @include mq('1024') {
             font-size: 16px;
@@ -119,19 +193,25 @@
           &::after {
             content: "";
             position: absolute;
-            top: 0;
+            top: -32px;
             left: 0;
             width: 100%;
             height: 4px;
             background-color: transparent;
             transition: background 0.2s ease-in-out;
+            display: none;
+            @include mq('768') {
+              display: block;
+            }
           }
-          &.active {
-            color: $black;
+          &.active, &:hover {
+            color: $main;
+            @include mq('768') {
+              color: $black;
+            }
             &::after {
               background-color: $main;
             }
-
           }
         }
       }
@@ -140,6 +220,7 @@
       display: flex;
       order: 2;
       font-size: 0;
+      z-index: 1;
       @include mq('768') {
         font-size: 14px;
         color: $main;
@@ -158,6 +239,7 @@
           width: 20px;
           height: 18px;
           margin-right: 12px;
+          transform: translateY(-3px);
         }
       }
     }

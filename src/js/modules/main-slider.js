@@ -1,4 +1,4 @@
-if(document.querySelector('body').classList.contains('index')) {
+if(body.classList.contains('index')) {
   const swiper = new Swiper('.page-slider', {
     loop: false,
     slidesPerView: 1,

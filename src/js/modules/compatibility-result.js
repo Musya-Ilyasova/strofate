@@ -39,8 +39,29 @@ function resultsListAdd(results) {
   let resultsList = results[0]['percentage-list'];
   let list = document.querySelector('.results-list');
   for(let i=0; i<=resultsList.length-1; i++) {
+    let li = document.createElement('li');
+    li.classList.add('results-list-item');
+    let title = document.createElement('span');
+    title.classList.add('results-list-item__title');
+    title.textContent = resultsList[i]['name'];
+    li.innerHTML = '<svg class="icon icon-'+resultsList[i]["icon"]+'"><use xlink:href="img/sprite/sprite.svg#'+ resultsList[i]["icon"]+ '"></use></svg>'
+    li.appendChild(title);
+    let value = document.createElement('span');
+    value.classList.add('results-list-item__value');
+    value.textContent = resultsList[i]['percent'] + '%';
+    li.appendChild(value);
+    let bar = document.createElement('div');
+    bar.classList.add('results-list-item__bar');
+    let barI = document.createElement('i');
+    bar.appendChild(barI);
+    barI.style.width = resultsList[i]['percent'] + '%';
+    li.appendChild(bar);
+    list.appendChild(li);
+
 
   }
 }
+if(body.classList.contains('compatibility-result')) {
+  compatibilityResultLoad();
+}
 
-compatibilityResultLoad();

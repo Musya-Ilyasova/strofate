@@ -58,7 +58,7 @@ body:not(.index) .main-background {
     position: absolute;
   }
   @include mq('1280') {
-    min-height: 1170px;
+    min-height: 1052px;
     background-size: auto 100%;
   }
   @media (min-device-width: 768px) and (max-device-width: 911px) and (orientation: portrait) {

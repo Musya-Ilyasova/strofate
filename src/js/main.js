@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  let body = document.querySelector('body');
   @@include('modules/svg.js');
   @@include('modules/polyfills.js');
   @@include('modules/menu.js');
@@ -8,5 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
   @@include('modules/premium-form-list.js');
   @@include('modules/select.js');
   @@include('modules/compatibility-result.js');
-
+  @@include('modules/tabs.js');
+  @@include('modules/changePass.js');
 });

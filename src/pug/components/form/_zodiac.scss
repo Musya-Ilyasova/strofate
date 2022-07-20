@@ -6,6 +6,12 @@
     .icon {
       width: 175px;
       height: 175px;
+      fill: none;
+      stroke: $black;
+      stroke-width: 3px;
+      &-gemini {
+        stroke-width: 13px;
+      }
     }
   }
   &__title {
