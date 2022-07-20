@@ -1,5 +1,5 @@
 function compatibilityResultLoad() {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   const resultsUrl = '/js/compatibility-result.json';
   xhr.open('GET', resultsUrl, false);
   xhr.send();
@@ -32,8 +32,8 @@ function zodiacItemAdd(results) {
     item.append(itemTitle);
     item.append(itemSubtitle);
     i++;
-  })
-}
+  });
+};
 
 function resultsListAdd(results) {
   let resultsList = results[0]['percentage-list'];
