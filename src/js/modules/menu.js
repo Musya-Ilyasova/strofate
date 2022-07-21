@@ -16,22 +16,18 @@ function burgerToggle() {
 };
 
 function menuLocation() {
+  let local = document.location.pathname.substring(1, document.location.pathname.length-5);
   let links = document.querySelectorAll('.header-profil-menu-item__link');
-  links.forEach((link) => {
-    link.classList.remove('active');
-    let href = links.href;
-    let local = document.location.pathname.substring(1, document.location.pathname.length-5);
-    console.log(local);
-    if(local.indexOf(href)) {
-      link.classList.add('active');
-    };
-  })
-
+  if(document.querySelector(`.header-profil-menu-item__link[href*=${local}]`) != null) {
+    document.querySelector(`.header-profil-menu-item__link[href*=${local}]`).classList.add('active')
+  } else {
+    document.querySelector('.header-profil-menu-item__link[href*=profil]').classList.add('active');
+  }
 }
 
-menuLocation();
 
 
 if(document.querySelector('header').classList.contains('header-profil')) {
   burgerToggle();
+  menuLocation();
 }

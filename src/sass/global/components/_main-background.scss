@@ -9,6 +9,7 @@
   height: 100vh;
   max-height: 747px;
   width: 100%;
+  overflow: hidden;
   @include mq('768') {
     position: fixed;
     top: 0;
@@ -50,25 +51,72 @@
       display: block;
     }
   }
+  img {
+    object-fit: cover;
+    position: absolute;
+    display: none; 
+    @include mq('768') {
+      display: block;
+    }
+    &.planet {
+      &-1 {
+        width: auto;
+        height: 12%;
+        object-fit: contain;
+        right: -4.5%;
+        top: 32%;
+      }
+      &-2 {
+        width: auto;
+        height: 7.7%;
+        top: -20px;
+        right: 20.5%;
+      }
+      &-3 {
+        height: 17.4%;
+        width: auto;
+        bottom: 25.6%;
+        right: 20.8%;
+      }
+    }
+    &.zodiacs {
+      height: 80%;
+      width: auto;
+      top: 2%;
+      right: 0;
+    }
+
+  }
 }
 
-body:not(.index) .main-background {
-  @include mq('768') {
-    background-image: url(../img/bg-page.png);
-    position: absolute;
-  }
+body:not(.index) {
   @include mq('1280') {
-    min-height: 1052px;
-    background-size: auto 100%;
+    min-height: 1216px;
   }
-  @media (min-device-width: 768px) and (max-device-width: 911px) and (orientation: portrait) {
-    background-position: right -150px center;
+  .main-background {
+    @include mq('768') {
+      background-image: url(../img/bg-page.png);
+      position: absolute;
+    }
+    @include mq('1280') {
+      min-height: 1052px;
+      background-size: auto 100%;
+    }
+    @media (min-device-width: 768px) and (max-device-width: 911px) and (orientation: portrait) {
+      background-position: right -150px center;
+    }
+    @media (min-device-width: 912px) and (max-device-width: 1023px) and (orientation: portrait) {
+      background-position: right -225px center;
+    }
+    &:before {
+      display: none;
+    }
+    img {
+      &.planet {
+        &-3 {
+          right: 12.8%;
+        }
+      }
+    }
   }
-  @media (min-device-width: 912px) and (max-device-width: 1023px) and (orientation: portrait) {
-    background-position: right -225px center;
-  }
-  &:before {
-    display: none;
-  }
-
 }

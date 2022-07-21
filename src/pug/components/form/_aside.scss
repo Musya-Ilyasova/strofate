@@ -9,7 +9,6 @@
   pointer-events: all;
   padding: 32px;
   margin: 0 auto;    
-
   @include mq('768') {
     margin: auto 0 auto auto;
     max-width: 350px;

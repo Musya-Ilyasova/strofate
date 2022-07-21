@@ -50,6 +50,7 @@
 
 body:not(.index) .footer {
   position: relative;
+  padding-top: 20px;
   &:before {
     content: "";
     position: absolute;

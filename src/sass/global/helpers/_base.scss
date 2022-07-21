@@ -63,6 +63,7 @@ body:not(.index) section {
   padding-top: 56px;
   @include mq('768') {
     padding-top: 60px;
+    padding-bottom: 40px;
   }
 }
 
