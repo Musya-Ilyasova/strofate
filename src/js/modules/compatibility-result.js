@@ -11,6 +11,7 @@ function compatibilityResultLoad() {
     let results = JSON.parse(xhr.responseText);
     zodiacItemAdd(results);
     resultsListAdd(results);
+    compatibilityResultListAdd(results);
   }
 }
 
@@ -57,10 +58,32 @@ function resultsListAdd(results) {
     barI.style.width = resultsList[i]['percent'] + '%';
     li.appendChild(bar);
     list.appendChild(li);
-
-
   }
 }
+
+function compatibilityResultListAdd(results) {
+  let container = document.querySelector('.c-result .container');
+  let resultsList = results[0]['compatibility-results'];
+  for(let i = 0; i<=resultsList.length-1; i++) {
+    let item = document.createElement('div');
+    item.classList.add('c-result-item');
+    let title = document.createElement('h2');
+    title.classList.add('c-result-item__title');
+    title.textContent = resultsList[i].title;
+    let text = document.createElement('p');
+    text.classList.add('c-result-item__text');
+    text.textContent = resultsList[i].text;
+    item.appendChild(title);
+    item.appendChild(text);
+    let hr = document.createElement('hr');
+    container.appendChild(item);
+    if(i !=resultsList.length-1) {
+      hr.classList = "hr hr-sun";
+      container.appendChild(hr);
+    }
+  }
+}
+
 if(body.classList.contains('compatibility-result')) {
   compatibilityResultLoad();
 }
